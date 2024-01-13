@@ -24,7 +24,7 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
-ENV NEXT_OUTPUT=standalone
+#ENV NEXT_OUTPUT=standalone
 #ARG NEXT_PUBLIC_SALEOR_API_URL
 ENV NEXT_PUBLIC_SALEOR_API_URL=https://localhost:8000/graphql/
 ARG NEXT_PUBLIC_STOREFRONT_URL
