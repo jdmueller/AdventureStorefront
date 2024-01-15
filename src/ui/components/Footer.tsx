@@ -82,7 +82,9 @@ export async function Footer({ channel }: { channel: string }) {
 				)}
 
 				<div className="flex flex-col justify-between border-t border-neutral-200 py-10 sm:flex-row">
-					<p className="text-sm text-neutral-500">Copyright &copy; {currentYear} Adventure Parts, LLC</p>
+					<p className="text-sm text-neutral-500">
+						Copyright &copy; {currentYear} | Adventure Parts, LLC. All Rights Reserved.
+					</p>
 					<p className="flex gap-1 text-sm text-neutral-500">
 						Powered by{" "}
 						<Link target={"_blank"} href={"https://pysolution.com/"}>
