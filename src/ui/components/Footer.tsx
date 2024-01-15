@@ -91,7 +91,13 @@ export async function Footer({ channel }: { channel: string }) {
 							pySolution
 						</Link>{" "}
 						<Link href={"https://pysolution.com"} target={"_blank"} className={"opacity-30"}>
-							<Image alt="pySolution Python Logo" height={20} width={20} src={"/github-mark.svg"} />
+							<Image
+								alt="pySolution Python Logo"
+								height={20}
+								width={20}
+								icon-spin-reverse
+								src={"/python-brands.svg"}
+							/>
 						</Link>
 					</p>
 				</div>
