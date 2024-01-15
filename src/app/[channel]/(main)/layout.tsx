@@ -3,7 +3,7 @@ import { Footer } from "@/ui/components/Footer";
 import { Header } from "@/ui/components/Header";
 
 export const metadata = {
-	title: "Adventure Parts, LLC - Performance Parts For Motorcycles And E-Bikes",
+	title: "Adventure Parts | Performance Parts For Motorcycles And E-Bikes",
 	description: "High end performance parts for Adventure Motorcycles and Electric Bikes.",
 };
 

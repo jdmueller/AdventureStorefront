@@ -3,9 +3,9 @@ import { executeGraphQL } from "@/lib/graphql";
 import { ProductList } from "@/ui/components/ProductList";
 
 export const metadata = {
-	title: "Adventure Parts, LLC  - Performance Parts For Motorcycles And E-Bikes",
+	title: "Adventure Parts | Performance Parts For Motorcycles And E-Bikes",
 	description:
-		"Adventure Parts, LLC features high end performance parts for Adventure Motorcycles and Electric Bikes",
+		"Adventure Parts features high end performance parts for Adventure Motorcycles and Electric Bikes",
 };
 
 export default async function Page({ params }: { params: { channel: string } }) {
