@@ -74,7 +74,7 @@ export async function Footer({ channel }: { channel: string }) {
 				</div>
 
 				{channels?.channels && (
-					<div className="mb-4 text-neutral-500">
+					<div className="mb-4 text-neutral-800">
 						<label>
 							<span className="text-sm">Change currency:</span> <ChannelSelect channels={channels.channels} />
 						</label>
@@ -82,10 +82,10 @@ export async function Footer({ channel }: { channel: string }) {
 				)}
 
 				<div className="flex flex-col justify-between border-t border-orange-600 py-10 sm:flex-row">
-					<p className="text-sm text-neutral-500">
+					<p className="text-sm text-neutral-800">
 						Copyright &copy; {currentYear} | Adventure Parts, LLC. All Rights Reserved.
 					</p>
-					<p className="flex gap-1 text-sm text-neutral-500">
+					<p className="flex gap-1 text-sm text-neutral-800">
 						Powered by{" "}
 						<Link target={"_blank"} href={"https://pysolution.com/"}>
 							pySolution
