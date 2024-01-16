@@ -22,7 +22,7 @@ export async function Footer({ channel }: { channel: string }) {
 	const currentYear = new Date().getFullYear();
 
 	return (
-		<footer className="border-orange-500 bg-orange-400">
+		<footer className="border-orange-600 bg-orange-400">
 			<div className="mx-auto max-w-7xl px-4 lg:px-8">
 				<div className="grid grid-cols-3 gap-8 py-16">
 					{footerLinks.menu?.items?.map((item) => {
@@ -81,7 +81,7 @@ export async function Footer({ channel }: { channel: string }) {
 					</div>
 				)}
 
-				<div className="flex flex-col justify-between border-t border-neutral-200 py-10 sm:flex-row">
+				<div className="flex flex-col justify-between border-t border-orange-600 py-10 sm:flex-row">
 					<p className="text-sm text-neutral-500">
 						Copyright &copy; {currentYear} | Adventure Parts, LLC. All Rights Reserved.
 					</p>
