@@ -11,7 +11,7 @@ type Props = {
 export const OrderListItem = ({ order }: Props) => {
 	return (
 		<li className="bg-white">
-			<div className="flex flex-col gap-2 border bg-orange-200/20 px-6 py-4 md:grid md:grid-cols-4 md:gap-8">
+			<div className="flex flex-col gap-2 border bg-neutral-200/20 px-6 py-4 md:grid md:grid-cols-4 md:gap-8">
 				<dl className="flex flex-col divide-y divide-neutral-200 text-sm md:col-span-3 md:grid md:grid-cols-3 md:gap-6 md:divide-none lg:col-span-2">
 					<div className="flex flex-row items-center justify-between py-4 md:flex-col md:items-start md:gap-y-1">
 						<dt className="font-medium text-neutral-900">Order number</dt>
