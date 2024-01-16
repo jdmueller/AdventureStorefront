@@ -29,7 +29,7 @@ export async function Footer({ channel }: { channel: string }) {
 						return (
 							<div key={item.id}>
 								<h3 className="text-sm font-semibold text-neutral-900">{item.name}</h3>
-								<ul className="mt-4 space-y-4 [&>li]:text-neutral-500">
+								<ul className="mt-4 space-y-4 [&>li]:text-neutral-800">
 									{item.children?.map((child) => {
 										if (child.category) {
 											return (
@@ -90,7 +90,7 @@ export async function Footer({ channel }: { channel: string }) {
 						<Link target={"_blank"} href={"https://pysolution.com/"}>
 							pySolution
 						</Link>{" "}
-						<Link href={"https://pysolution.com"} target={"_blank"} className={"opacity-10"}>
+						<Link href={"https://pysolution.com"} target={"_blank"} className={"opacity-70"}>
 							<Image
 								alt="pySolution Python Logo"
 								height={20}
