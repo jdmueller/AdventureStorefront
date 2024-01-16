@@ -11,7 +11,7 @@ export async function Pagination({
 	};
 }) {
 	return (
-		<nav className="flex items-center justify-center gap-x-4 border-orange-400 px-4 pt-12">
+		<nav className="flex items-center justify-center gap-x-4 border-neutral-200 px-4 pt-12">
 			<LinkWithChannel
 				href={pageInfo.hasNextPage ? `${pageInfo.basePathname}?${pageInfo.urlSearchParams?.toString()}` : "#"}
 				className={clsx("px-4 py-2 text-sm font-medium ", {
