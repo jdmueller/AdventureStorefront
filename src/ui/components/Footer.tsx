@@ -28,7 +28,7 @@ export async function Footer({ channel }: { channel: string }) {
 					{footerLinks.menu?.items?.map((item) => {
 						return (
 							<div key={item.id}>
-								if ({item.id}={"Adventure Parts"}){" "}
+								if (item.name === {"Adventure Parts"}){" "}
 								{
 									<LinkWithChannel aria-label="homepage" href="/">
 										<Image
@@ -38,8 +38,8 @@ export async function Footer({ channel }: { channel: string }) {
 											src={"/Adventure-Parts-Text.svg"}
 										/>
 									</LinkWithChannel>
-								}{" "}
-								else {<h3 className="text-sm font-semibold text-neutral-900">{item.name}</h3>}
+								}
+								<h3 className="text-sm font-semibold text-neutral-900">{item.name}</h3>
 								<ul className="mt-4 space-y-4 [&>li]:text-neutral-800">
 									{item.children?.map((child) => {
 										if (child.category) {
