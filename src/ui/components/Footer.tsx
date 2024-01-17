@@ -25,13 +25,21 @@ export async function Footer({ channel }: { channel: string }) {
 		<footer className="border-orange-600 bg-orange-400">
 			<div className="mx-auto max-w-7xl px-4 lg:px-8">
 				<div className="grid grid-cols-3 gap-8 py-16">
-					<LinkWithChannel aria-label="homepage" href="/">
-						<Image alt={"Adventure Parts, LLC"} height={80} width={150} src={"/Adventure-Parts-Text.svg"} />
-					</LinkWithChannel>
 					{footerLinks.menu?.items?.map((item) => {
 						return (
 							<div key={item.id}>
-								<h3 className="text-sm font-semibold text-neutral-900">{item.name}</h3>
+								if ({item.id}={"Adventure Parts"}){" "}
+								{
+									<LinkWithChannel aria-label="homepage" href="/">
+										<Image
+											alt={"Adventure Parts, LLC"}
+											height={80}
+											width={150}
+											src={"/Adventure-Parts-Text.svg"}
+										/>
+									</LinkWithChannel>
+								}{" "}
+								else {<h3 className="text-sm font-semibold text-neutral-900">{item.name}</h3>}
 								<ul className="mt-4 space-y-4 [&>li]:text-neutral-800">
 									{item.children?.map((child) => {
 										if (child.category) {
