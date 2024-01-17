@@ -29,6 +29,14 @@ export async function Footer({ channel }: { channel: string }) {
 						return (
 							<div key={item.id}>
 								<h3 className="text-sm font-semibold text-neutral-900">{item.name}</h3>
+								<LinkWithChannel aria-label="homepage" href="/">
+									<Image
+										alt={"Adventure Parts, LLC"}
+										height={40}
+										width={100}
+										src={"/Adventure-Parts-Text.svg"}
+									/>
+								</LinkWithChannel>
 								<ul className="mt-4 space-y-4 [&>li]:text-neutral-800">
 									{item.children?.map((child) => {
 										if (child.category) {
