@@ -28,17 +28,14 @@ export async function Footer({ channel }: { channel: string }) {
 					{footerLinks.menu?.items?.map((item) => {
 						return (
 							<div key={item.id}>
-								if (item.name === {"Adventure Parts"}){" "}
-								{
-									<LinkWithChannel aria-label="homepage" href="/">
-										<Image
-											alt={"Adventure Parts, LLC"}
-											height={80}
-											width={150}
-											src={"/Adventure-Parts-Text.svg"}
-										/>
-									</LinkWithChannel>
-								}
+								<LinkWithChannel aria-label="homepage" href="/">
+									<Image
+										alt={"Adventure Parts, LLC"}
+										height={80}
+										width={150}
+										src={"/Adventure-Parts-Text.svg"}
+									/>
+								</LinkWithChannel>
 								<h3 className="text-sm font-semibold text-neutral-900">{item.name}</h3>
 								<ul className="mt-4 space-y-4 [&>li]:text-neutral-800">
 									{item.children?.map((child) => {
