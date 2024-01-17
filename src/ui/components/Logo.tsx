@@ -4,7 +4,6 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { LinkWithChannel } from "../atoms/LinkWithChannel";
 
-
 const companyName = "ADVENTURE PARTS";
 
 export const Logo = () => {
@@ -20,13 +19,7 @@ export const Logo = () => {
 	return (
 		<div className="flex items-center font-bold">
 			<LinkWithChannel aria-label="homepage" href="/">
-				<Image
-					alt="pySolution Python Logo"
-					height={20}
-					width={20}
-					icon-spin-reverse
-					src={"/Adventure-Parts.svg"}
-				/>
+				<Image alt="Adventure Parts Logo" height={80} src={"/Adventure-Parts.svg"} />
 			</LinkWithChannel>
 		</div>
 	);
