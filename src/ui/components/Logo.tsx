@@ -19,7 +19,7 @@ export const Logo = () => {
 	return (
 		<div className="flex items-center font-bold">
 			<LinkWithChannel aria-label="homepage" href="/">
-				<Image alt={companyName} height={80} width={80} src={"/Adventure-Parts.svg"} />
+				<Image alt={companyName} height={78} width={78} src={"/Adventure-Parts.svg"} />
 			</LinkWithChannel>
 		</div>
 	);
