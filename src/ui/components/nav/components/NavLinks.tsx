@@ -6,7 +6,7 @@ import { MenuGetBySlugDocument } from "@/gql/graphql";
 export const NavLinks = async ({ channel }: { channel: string }) => {
 	const navLinks = await executeGraphQL(MenuGetBySlugDocument, {
 		variables: { slug: "navbar", channel },
-		revalidate: 10,
+		revalidate: 60 * 60 * 24,
 	});
 
 	return (
