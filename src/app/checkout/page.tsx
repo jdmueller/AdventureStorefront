@@ -1,8 +1,11 @@
 import { invariant } from "ts-invariant";
+import Image from "next/image";
 import { RootWrapper } from "./pageWrapper";
 
+const companyName = "ADVENTURE PARTS, LLC";
+
 export const metadata = {
-	title: "Checkout · Saleor Storefront example",
+	title: "Checkout | Adventure Parts, LLC",
 };
 
 export default function CheckoutPage({
@@ -18,10 +21,10 @@ export default function CheckoutPage({
 
 	return (
 		<div className="min-h-dvh bg-white">
-			<section className="mx-auto flex min-h-dvh max-w-7xl flex-col p-8">
+			<section className="mx-auto flex min-h-dvh max-w-7xl flex-col pt-6">
 				<div className="flex items-center font-bold">
 					<a aria-label="homepage" href="/">
-						ACME
+						<Image alt={companyName} height={106} width={106} src={"/Adventure-Parts.svg"} />
 					</a>
 				</div>
 				<h1 className="mt-8 text-3xl font-bold text-neutral-900">Checkout</h1>

@@ -2,8 +2,9 @@ import { type ReactNode } from "react";
 import { AuthProvider } from "@/ui/components/AuthProvider";
 
 export const metadata = {
-	title: "Saleor Storefront example",
-	description: "Starter pack for building performant e-commerce experiences with Saleor.",
+	title: "Checkout | Adventure Parts, LLC",
+	description:
+		"Adventure Parts features high end performance parts for Adventure Motorcycles and Electric Bikes",
 };
 
 export default function RootLayout(props: { children: ReactNode }) {
