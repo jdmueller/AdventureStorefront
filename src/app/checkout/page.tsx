@@ -5,7 +5,7 @@ import { RootWrapper } from "./pageWrapper";
 const companyName = "ADVENTURE PARTS LLC";
 
 export const metadata = {
-	title: "Checkout | Adventure Parts, LLC",
+	title: "Checkout - Adventure Parts LLC",
 };
 
 export default function CheckoutPage({
