@@ -2,7 +2,7 @@ import { invariant } from "ts-invariant";
 import Image from "next/image";
 import { RootWrapper } from "./pageWrapper";
 
-const companyName = "ADVENTURE PARTS, LLC";
+const companyName = "ADVENTURE PARTS LLC";
 
 export const metadata = {
 	title: "Checkout | Adventure Parts, LLC",
