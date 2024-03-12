@@ -45,7 +45,64 @@ export default async function Page({ params }: { params: { channel: string } }) 
 						/>
 						<div className="mt-2 flex justify-between">
 							<div>
-								<h3 className="mt-1 text-sm font-semibold text-neutral-900">product name</h3>
+								<h3 className="mt-1 text-sm font-semibold text-neutral-900">Motorcycles</h3>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li data-testid="ProductElement">
+					<div>
+						<ProductImageWrapper
+							src={
+								"https://adventureparts.s3.amazonaws.com/category-backgrounds/orv-ssv-my24-maverickr-xrs-sas-1000t-carbon-black-0007a_c5916037.avif"
+							}
+							alt={"test"}
+							width={512}
+							height={512}
+							sizes={"512px"}
+						/>
+						<div className="mt-2 flex justify-between">
+							<div>
+								<h3 className="mt-1 text-sm font-semibold text-neutral-900">Side x Side UTVs</h3>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li data-testid="ProductElement">
+					<div>
+						<ProductImageWrapper
+							src={
+								"https://adventureparts.s3.amazonaws.com/category-backgrounds/20220428-Sur-RonStormBee45RIGHT.jpg_79079160.webp"
+							}
+							alt={"test"}
+							width={512}
+							height={512}
+							sizes={"512px"}
+						/>
+						<div className="mt-2 flex justify-between">
+							<div>
+								<h3 className="mt-1 text-sm font-semibold text-neutral-900">E-Bikes</h3>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li data-testid="ProductElement">
+					<div>
+						<ProductImageWrapper
+							src={
+								"https://adventureparts.s3.amazonaws.com/category-backgrounds/WKGT-FullBodyHero2_5000x.jpg_bae222e3.webp"
+							}
+							alt={"test"}
+							width={512}
+							height={512}
+							sizes={"512px"}
+						/>
+						<div className="mt-2 flex justify-between">
+							<div>
+								<h3 className="mt-1 text-sm font-semibold text-neutral-900">Scooters</h3>
 							</div>
 						</div>
 					</div>
