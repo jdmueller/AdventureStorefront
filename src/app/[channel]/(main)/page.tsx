@@ -24,9 +24,7 @@ export default async function Page({ params }: { params: { channel: string } }) 
 
 	return (
 		<section className="mx-auto max-w-7xl p-8 pb-16">
-			<h2 className="sr-only">Product list</h2>
-			<h2>Test</h2>
-
+			<h1>Categories</h1>
 			<ul
 				role="list"
 				data-testid="ProductList"
@@ -45,7 +43,7 @@ export default async function Page({ params }: { params: { channel: string } }) 
 						/>
 						<div className="mt-2 flex justify-between">
 							<div>
-								<h3 className="mt-1 text-sm font-semibold text-neutral-900">Motorcycles</h3>
+								<h2 className="mt-1 text-center text-sm font-semibold text-neutral-900">Motorcycles</h2>
 							</div>
 						</div>
 					</div>
@@ -64,7 +62,7 @@ export default async function Page({ params }: { params: { channel: string } }) 
 						/>
 						<div className="mt-2 flex justify-between">
 							<div>
-								<h3 className="mt-1 text-sm font-semibold text-neutral-900">Side x Side UTVs</h3>
+								<h2 className="mt-1 text-center text-sm font-semibold text-neutral-900">Side x Side UTVs</h2>
 							</div>
 						</div>
 					</div>
@@ -83,7 +81,7 @@ export default async function Page({ params }: { params: { channel: string } }) 
 						/>
 						<div className="mt-2 flex justify-between">
 							<div>
-								<h3 className="mt-1 text-sm font-semibold text-neutral-900">E-Bikes</h3>
+								<h2 className="mt-1 text-center text-sm font-semibold text-neutral-900">E-Bikes</h2>
 							</div>
 						</div>
 					</div>
@@ -102,13 +100,13 @@ export default async function Page({ params }: { params: { channel: string } }) 
 						/>
 						<div className="mt-2 flex justify-between">
 							<div>
-								<h3 className="mt-1 text-sm font-semibold text-neutral-900">Scooters</h3>
+								<h2 className="mt-1 text-center text-sm font-semibold text-neutral-900">Scooters</h2>
 							</div>
 						</div>
 					</div>
 				</li>
 			</ul>
-
+			<h1>Featured Products</h1>
 			<ProductList products={products} />
 		</section>
 	);
