@@ -24,7 +24,7 @@ export default async function Page({ params }: { params: { channel: string } }) 
 
 	return (
 		<section className="mx-auto max-w-7xl p-8 pb-16">
-			<h1 className="text-xl">Categories</h1>
+			<h1 className="text-xl font-bold">Categories</h1>
 			<ul
 				role="list"
 				data-testid="ProductList"
@@ -87,7 +87,7 @@ export default async function Page({ params }: { params: { channel: string } }) 
 					</div>
 				</li>
 			</ul>
-			<h1 className="mt-10 text-xl">Featured Products</h1>
+			<h1 className="mt-10 text-xl font-bold">Featured Products</h1>
 			<ProductList products={products} />
 		</section>
 	);
