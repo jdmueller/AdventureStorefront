@@ -24,7 +24,7 @@ export default async function Page({ params }: { params: { channel: string } }) 
 
 	return (
 		<section className="mx-auto max-w-7xl p-8 pb-16">
-			<h1>Categories</h1>
+			<h1 className="text-xl">Categories</h1>
 			<ul
 				role="list"
 				data-testid="ProductList"
@@ -43,7 +43,7 @@ export default async function Page({ params }: { params: { channel: string } }) 
 						/>
 						<div className="mt-2 flex justify-between">
 							<div>
-								<h2 className="text-md mt-1 text-center font-semibold text-neutral-900">Motorcycles</h2>
+								<h2 className="text-md center mt-1 font-semibold text-neutral-900">Motorcycles</h2>
 							</div>
 						</div>
 					</div>
@@ -62,7 +62,7 @@ export default async function Page({ params }: { params: { channel: string } }) 
 						/>
 						<div className="mt-2 flex justify-between">
 							<div>
-								<h2 className="text-md mt-1 text-center font-semibold text-neutral-900">Side x Side UTVs</h2>
+								<h2 className="text-md center mt-1 font-semibold text-neutral-900">Side x Side UTVs</h2>
 							</div>
 						</div>
 					</div>
@@ -81,13 +81,13 @@ export default async function Page({ params }: { params: { channel: string } }) 
 						/>
 						<div className="mt-2 flex justify-between">
 							<div>
-								<h2 className="text-md mt-1 text-center font-semibold text-neutral-900">E-Bikes</h2>
+								<h2 className="text-md center mt-1 font-semibold text-neutral-900">E-Bikes</h2>
 							</div>
 						</div>
 					</div>
 				</li>
 			</ul>
-			<h1 className="mt-10">Featured Products</h1>
+			<h1 className="mt-10 text-xl">Featured Products</h1>
 			<ProductList products={products} />
 		</section>
 	);
