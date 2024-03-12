@@ -28,7 +28,7 @@ export default async function Page({ params }: { params: { channel: string } }) 
 			<ul
 				role="list"
 				data-testid="ProductList"
-				className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-4"
+				className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
 			>
 				<li data-testid="ProductElement">
 					<div>
@@ -82,25 +82,6 @@ export default async function Page({ params }: { params: { channel: string } }) 
 						<div className="mt-2 flex justify-between">
 							<div>
 								<h2 className="mt-1 text-center text-sm font-semibold text-neutral-900">E-Bikes</h2>
-							</div>
-						</div>
-					</div>
-				</li>
-
-				<li data-testid="ProductElement">
-					<div>
-						<ProductImageWrapper
-							src={
-								"https://adventureparts.s3.amazonaws.com/category-backgrounds/WKGT-FullBodyHero2_5000x.jpg_bae222e3.webp"
-							}
-							alt={"test"}
-							width={512}
-							height={512}
-							sizes={"512px"}
-						/>
-						<div className="mt-2 flex justify-between">
-							<div>
-								<h2 className="mt-1 text-center text-sm font-semibold text-neutral-900">Scooters</h2>
 							</div>
 						</div>
 					</div>
