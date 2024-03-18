@@ -34,7 +34,7 @@ export default async function Page({ params }: { params: { channel: string } }) 
 					<div>
 						<ProductImageWrapper
 							src={
-								"https://adventureparts.s3.amazonaws.com/category-backgrounds/PHO_BIKE_90_REVO_MY24-KTM-390-Adventure-BLACK-90-Front-_44ede99d.png"
+								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Adventure-Motorcycles_ef8b144d.png"
 							}
 							alt={"test"}
 							width={512}
@@ -42,8 +42,27 @@ export default async function Page({ params }: { params: { channel: string } }) 
 							sizes={"512px"}
 						/>
 						<div className="mt-2 flex justify-between">
-							<div>
-								<h2 className="text-md center mt-1 font-semibold text-neutral-900">Motorcycles</h2>
+							<div className="mx-auto">
+								<h2 className="text-md mt-1 font-semibold text-neutral-900">Adventure Motorcycles</h2>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li data-testid="ProductElement">
+					<div>
+						<ProductImageWrapper
+							src={
+								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-E-Bikes.jpg_c756db65.webp"
+							}
+							alt={"test"}
+							width={512}
+							height={512}
+							sizes={"512px"}
+						/>
+						<div className="mt-2 flex justify-between text-center">
+							<div className="mx-auto">
+								<h2 className="text-md mt-1 font-semibold text-neutral-900">Motocross Motorcycles</h2>
 							</div>
 						</div>
 					</div>
@@ -61,27 +80,8 @@ export default async function Page({ params }: { params: { channel: string } }) 
 							sizes={"512px"}
 						/>
 						<div className="mt-2 flex justify-between">
-							<div>
-								<h2 className="text-md center mt-1 font-semibold text-neutral-900">Side x Side UTVs</h2>
-							</div>
-						</div>
-					</div>
-				</li>
-
-				<li data-testid="ProductElement">
-					<div>
-						<ProductImageWrapper
-							src={
-								"https://adventureparts.s3.amazonaws.com/category-backgrounds/20220428-Sur-RonStormBee45RIGHT.jpg_79079160.webp"
-							}
-							alt={"test"}
-							width={512}
-							height={512}
-							sizes={"512px"}
-						/>
-						<div className="mt-2 flex justify-between">
-							<div>
-								<h2 className="text-md center mt-1 font-semibold text-neutral-900">E-Bikes</h2>
+							<div className="mx-auto">
+								<h2 className="text-md mt-1 font-semibold text-neutral-900">Side x Side UTVs</h2>
 							</div>
 						</div>
 					</div>
