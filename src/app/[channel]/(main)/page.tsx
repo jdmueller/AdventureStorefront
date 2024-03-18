@@ -53,7 +53,26 @@ export default async function Page({ params }: { params: { channel: string } }) 
 					<div>
 						<ProductImageWrapper
 							src={
-								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-E-Bikes.jpg_c756db65.webp"
+								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Street-KTM-RC-390_238ab132.png"
+							}
+							alt={"test"}
+							width={512}
+							height={512}
+							sizes={"512px"}
+						/>
+						<div className="mt-2 flex justify-between">
+							<div className="mx-auto">
+								<h2 className="text-md mt-1 font-semibold text-neutral-900">Street Motorcycles</h2>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li data-testid="ProductElement">
+					<div>
+						<ProductImageWrapper
+							src={
+								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Subcategory-Yamaha-YZ450F_e772a58d.webp"
 							}
 							alt={"test"}
 							width={512}
@@ -82,6 +101,44 @@ export default async function Page({ params }: { params: { channel: string } }) 
 						<div className="mt-2 flex justify-between">
 							<div className="mx-auto">
 								<h2 className="text-md mt-1 font-semibold text-neutral-900">Side x Side UTVs</h2>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li data-testid="ProductElement">
+					<div>
+						<ProductImageWrapper
+							src={
+								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Surron-SuperBee.jpg_451c3537.webp"
+							}
+							alt={"test"}
+							width={512}
+							height={512}
+							sizes={"512px"}
+						/>
+						<div className="mt-2 flex justify-between">
+							<div className="mx-auto">
+								<h2 className="text-md mt-1 font-semibold text-neutral-900">Electric Vehicles</h2>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li data-testid="ProductElement">
+					<div>
+						<ProductImageWrapper
+							src={
+								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Bicycles-Specialized-S-Works-Epic_2d163ed6.webp"
+							}
+							alt={"test"}
+							width={512}
+							height={512}
+							sizes={"512px"}
+						/>
+						<div className="mt-2 flex justify-between">
+							<div className="mx-auto">
+								<h2 className="text-md mt-1 font-semibold text-neutral-900">Bicycles</h2>
 							</div>
 						</div>
 					</div>

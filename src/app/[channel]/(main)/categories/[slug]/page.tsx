@@ -201,6 +201,173 @@ export default async function Page({ params }: { params: { slug: string; channel
 		);
 	}
 
+	if (params.slug === "motocross-motorcycles") {
+		return (
+			<div className="mx-auto max-w-7xl p-8 pb-16">
+				<h1 className="text-xl font-semibold">{name}</h1>
+				<ul
+					role="list"
+					data-testid="ProductList"
+					className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-4"
+				>
+					<li data-testid="ProductElement">
+						<div>
+							<ProductImageWrapper
+								src={
+									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Subcategory-KTM-450-SX-F_3977d361.png"
+								}
+								alt={"test"}
+								width={512}
+								height={512}
+								sizes={"512px"}
+							/>
+							<div className="mt-2 flex justify-between">
+								<div className="mx-auto">
+									<h2 className="text-md mt-1 font-semibold text-neutral-900">KTM 450 SX-F</h2>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li data-testid="ProductElement">
+						<div>
+							<ProductImageWrapper
+								src={
+									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Subcategory-KTM-300-SX_69824e76.png"
+								}
+								alt={"test"}
+								width={512}
+								height={512}
+								sizes={"512px"}
+							/>
+							<div className="mt-2 flex justify-between">
+								<div className="mx-auto">
+									<h2 className="text-md mt-1 font-semibold text-neutral-900">KTM 300 SX</h2>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li data-testid="ProductElement">
+						<div>
+							<ProductImageWrapper
+								src={
+									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Subcategory-Yamaha-YZ450F_e772a58d.webp"
+								}
+								alt={"test"}
+								width={512}
+								height={512}
+								sizes={"512px"}
+							/>
+							<div className="mt-2 flex justify-between">
+								<div className="mx-auto">
+									<h2 className="text-md mt-1 font-semibold text-neutral-900">Yamaha YZ450F</h2>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li data-testid="ProductElement">
+						<div>
+							<ProductImageWrapper
+								src={
+									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Subcategory-Yamaha-YZ125_176ddcbb.webp"
+								}
+								alt={"test"}
+								width={512}
+								height={512}
+								sizes={"512px"}
+							/>
+							<div className="mt-2 flex justify-between">
+								<div className="mx-auto">
+									<h2 className="text-md mt-1 font-semibold text-neutral-900">Yamaha YZ125</h2>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li data-testid="ProductElement">
+						<div>
+							<ProductImageWrapper
+								src={
+									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Subcategory-Honda-CRF450R_45737559.png"
+								}
+								alt={"test"}
+								width={512}
+								height={512}
+								sizes={"512px"}
+							/>
+							<div className="mt-2 flex justify-between">
+								<div className="mx-auto">
+									<h2 className="text-md mt-1 font-semibold text-neutral-900">Honda CRF450R</h2>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li data-testid="ProductElement">
+						<div>
+							<ProductImageWrapper
+								src={
+									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Subcategory-Honda-CRF250F_fef5e3d7.png"
+								}
+								alt={"test"}
+								width={512}
+								height={512}
+								sizes={"512px"}
+							/>
+							<div className="mt-2 flex justify-between">
+								<div className="mx-auto">
+									<h2 className="text-md mt-1 font-semibold text-neutral-900">Honda CRF250F</h2>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li data-testid="ProductElement">
+						<div>
+							<ProductImageWrapper
+								src={
+									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Subcategory-Kawasaki-KX250_f5c0aa8f.png"
+								}
+								alt={"test"}
+								width={512}
+								height={512}
+								sizes={"512px"}
+							/>
+							<div className="mt-2 flex justify-between">
+								<div className="mx-auto">
+									<h2 className="text-md mt-1 font-semibold text-neutral-900">Kawasaki KX250</h2>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li data-testid="ProductElement">
+						<div>
+							<ProductImageWrapper
+								src={
+									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Subcategory-Suzuki-RM-Z450_0187b7dc.png"
+								}
+								alt={"test"}
+								width={512}
+								height={512}
+								sizes={"512px"}
+							/>
+							<div className="mt-2 flex justify-between">
+								<div className="mx-auto">
+									<h2 className="text-md mt-1 font-semibold text-neutral-900">Suzuki RM-Z450</h2>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				{/* <h1 className="pb-8 pt-12 text-xl font-semibold">{name}</h1>
+				<ProductList products={products.edges.map((e) => e.node)} /> */}
+			</div>
+		);
+	}
+
 	if (params.slug === "side-x-side-utvs") {
 		return (
 			<div className="mx-auto max-w-7xl p-8 pb-16">
