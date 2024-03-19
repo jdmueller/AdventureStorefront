@@ -7,8 +7,8 @@ import { DraftModeNotification } from "@/ui/components/DraftModeNotification";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "Saleor Storefront example",
-	description: "Starter pack for building performant e-commerce experiences with Saleor.",
+	title: "Adventure Parts, LLC",
+	description: "igh end performance parts for Adventure Motorcycles and Electric Bikes.",
 	metadataBase: process.env.NEXT_PUBLIC_STOREFRONT_URL
 		? new URL(process.env.NEXT_PUBLIC_STOREFRONT_URL)
 		: undefined,
