@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { type ResolvingMetadata, type Metadata } from "next";
 import { ProductListByCategoryDocument } from "@/gql/graphql";
@@ -44,22 +45,24 @@ export default async function Page({ params }: { params: { slug: string; channel
 					className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-4"
 				>
 					<li data-testid="ProductElement">
-						<div>
-							<ProductImageWrapper
-								src={
-									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Subcategory-BMW-R-1250-GS_763667dd.png"
-								}
-								alt={"test"}
-								width={512}
-								height={512}
-								sizes={"512px"}
-							/>
-							<div className="mt-2 flex justify-between">
-								<div className="mx-auto">
-									<h2 className="text-md mt-1 font-semibold text-neutral-900">BMW R 1250 GS</h2>
+						<Link href={"https://pysolution.com/"}>
+							<div>
+								<ProductImageWrapper
+									src={
+										"https://adventureparts.s3.amazonaws.com/category-backgrounds/Subcategory-BMW-R-1250-GS_763667dd.png"
+									}
+									alt={"test"}
+									width={512}
+									height={512}
+									sizes={"512px"}
+								/>
+								<div className="mt-2 flex justify-between">
+									<div className="mx-auto">
+										<h2 className="text-md mt-1 font-semibold text-neutral-900">BMW R 1250 GS</h2>
+									</div>
 								</div>
 							</div>
-						</div>
+						</Link>
 					</li>
 
 					<li data-testid="ProductElement">

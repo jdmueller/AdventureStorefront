@@ -1,3 +1,4 @@
+import { LinkWithChannel } from "@/ui/atoms/LinkWithChannel";
 import { ProductListByCollectionDocument } from "@/gql/graphql";
 import { executeGraphQL } from "@/lib/graphql";
 import { ProductList } from "@/ui/components/ProductList";
@@ -31,22 +32,24 @@ export default async function Page({ params }: { params: { channel: string } }) 
 				className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
 			>
 				<li data-testid="ProductElement">
-					<div>
-						<ProductImageWrapper
-							src={
-								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Adventure-Motorcycles_ef8b144d.png"
-							}
-							alt={"test"}
-							width={512}
-							height={512}
-							sizes={"512px"}
-						/>
-						<div className="mt-2 flex justify-between">
-							<div className="mx-auto">
-								<h2 className="text-md mt-1 font-semibold text-neutral-900">Adventure Motorcycles</h2>
+					<LinkWithChannel href={"/categories/adventure-motorcycles"}>
+						<div>
+							<ProductImageWrapper
+								src={
+									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Adventure-Motorcycles_ef8b144d.png"
+								}
+								alt={"test"}
+								width={512}
+								height={512}
+								sizes={"512px"}
+							/>
+							<div className="mt-2 flex justify-between">
+								<div className="mx-auto">
+									<h2 className="text-md mt-1 font-semibold text-neutral-900">Adventure Motorcycles</h2>
+								</div>
 							</div>
 						</div>
-					</div>
+					</LinkWithChannel>
 				</li>
 
 				<li data-testid="ProductElement">
@@ -182,6 +185,70 @@ export default async function Page({ params }: { params: { channel: string } }) 
 					</div>
 				</li>
 			</ul>
+
+			<h1 className="mt-10 text-xl font-bold">Featured Brands</h1>
+			<ul
+				role="list"
+				data-testid="ProductList"
+				className="grid grid-cols-1 gap-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+			>
+				<li data-testid="ProductElement">
+					<div>
+						<ProductImageWrapper
+							src={"/Logo-Vortex-Racing.png"}
+							alt={"Vortex Racing Logo"}
+							width={250}
+							height={250}
+							sizes={"256px"}
+						/>
+					</div>
+				</li>
+				<li data-testid="ProductElement">
+					<div>
+						<ProductImageWrapper
+							src={"/Logo-Galfer-USA.png"}
+							alt={"Galfer Racing USA Logo"}
+							width={256}
+							height={256}
+							sizes={"256px"}
+						/>
+					</div>
+				</li>
+				<li data-testid="ProductElement">
+					<div>
+						<ProductImageWrapper
+							src={"/Logo-Puig-Hi-Tech-Parts.png"}
+							alt={"Puig Hi Tech Parts Logo"}
+							width={250}
+							height={250}
+							sizes={"256px"}
+						/>
+					</div>
+				</li>
+				<li data-testid="ProductElement">
+					<div>
+						<ProductImageWrapper
+							src={"/Logo-DNA-Filters.png"}
+							alt={"DNA High Flow Air Filters Logo"}
+							width={250}
+							height={250}
+							sizes={"256px"}
+						/>
+					</div>
+				</li>
+				<li data-testid="ProductElement">
+					<div>
+						<ProductImageWrapper
+							src={"/Logo-Hotbodies-Racing.png"}
+							alt={"Hotbodies Racing Logo"}
+							width={250}
+							height={250}
+							sizes={"256px"}
+						/>
+					</div>
+				</li>
+			</ul>
+
 			<h1 className="mt-10 text-xl font-bold">Featured Products</h1>
 			<ProductList products={products} />
 		</section>
