@@ -24,7 +24,7 @@ export async function Footer({ channel }: { channel: string }) {
 	return (
 		<footer className="border-orange-600 bg-orange-400">
 			<div className="mx-auto max-w-7xl px-4 lg:px-8">
-				<div className="grid grid-cols-3 gap-8 py-16">
+				<div className="grid grid-cols-3 gap-8 pt-16">
 					{footerLinks.menu?.items?.map((item) => {
 						return (
 							<div key={item.id}>
@@ -81,6 +81,12 @@ export async function Footer({ channel }: { channel: string }) {
 					})}
 				</div>
 
+				<div className="flex flex-col justify-between pb-10 sm:flex-row">
+					<div className="ml-auto">
+						<Image alt="pySolution Python Logo" height={40} width={250} src={"/Credit-Card-Logos.png"} />
+					</div>
+				</div>
+
 				{channels?.channels && (
 					<div className="mb-4 text-neutral-800">
 						<label>
@@ -89,7 +95,7 @@ export async function Footer({ channel }: { channel: string }) {
 					</div>
 				)}
 
-				<div className="flex flex-col justify-between border-t border-orange-600 py-10 sm:flex-row">
+				<div className="flex flex-col justify-between border-t border-orange-600 pb-4 pt-10 sm:flex-row">
 					<p className="text-sm text-neutral-800">
 						Copyright &copy; {currentYear} | Adventure Parts, LLC. All Rights Reserved.
 					</p>
@@ -97,17 +103,24 @@ export async function Footer({ channel }: { channel: string }) {
 						Powered by{" "}
 						<Link target={"_blank"} href={"https://pysolution.com/"}>
 							pySolution
-						</Link>{" "}
-						<Link href={"https://pysolution.com"} target={"_blank"} className={"opacity-70"}>
-							<Image
-								alt="pySolution Python Logo"
-								height={20}
-								width={20}
-								icon-spin-reverse
-								src={"/python-brands.svg"}
-							/>
+						</Link>
+						<Link
+							href={"https://pysolution.com"}
+							target={"_blank"}
+							className={"icon-spin-reverse opacity-70"}
+						>
+							<Image alt="pySolution Python Logo" height={20} width={20} src={"/python-brands.svg"} />
 						</Link>
 					</p>
+				</div>
+
+				<div className="mx-auto flex flex-col justify-center pb-10 sm:flex-row">
+					<div className={"pr-10 pt-5 align-middle"}>
+						<Image alt="Stripe Verified Merchant" height={175} width={175} src={"/stripe-secure-logo.webp"} />
+					</div>
+					<div className={"pt-1 align-middle"}>
+						<Image alt="Trust Pilot Trusted Website" height={125} width={125} src={"/trustpilot-logo.png"} />
+					</div>
 				</div>
 			</div>
 		</footer>

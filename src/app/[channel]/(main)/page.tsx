@@ -28,7 +28,7 @@ export default async function Page({ params }: { params: { channel: string } }) 
 			<ul
 				role="list"
 				data-testid="ProductList"
-				className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3"
+				className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
 			>
 				<li data-testid="ProductElement">
 					<div>
@@ -53,7 +53,7 @@ export default async function Page({ params }: { params: { channel: string } }) 
 					<div>
 						<ProductImageWrapper
 							src={
-								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Street-KTM-RC-390_238ab132.png"
+								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Harley-Davidson-Sportster-S_923b6c29.webp"
 							}
 							alt={"test"}
 							width={512}
@@ -63,6 +63,25 @@ export default async function Page({ params }: { params: { channel: string } }) 
 						<div className="mt-2 flex justify-between">
 							<div className="mx-auto">
 								<h2 className="text-md mt-1 font-semibold text-neutral-900">Street Motorcycles</h2>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li data-testid="ProductElement">
+					<div>
+						<ProductImageWrapper
+							src={
+								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Street-KTM-RC-390_238ab132.png"
+							}
+							alt={"test"}
+							width={512}
+							height={512}
+							sizes={"512px"}
+						/>
+						<div className="mt-2 flex justify-between">
+							<div className="mx-auto">
+								<h2 className="text-md mt-1 font-semibold text-neutral-900">Sport Motorcycles</h2>
 							</div>
 						</div>
 					</div>
@@ -139,6 +158,25 @@ export default async function Page({ params }: { params: { channel: string } }) 
 						<div className="mt-2 flex justify-between">
 							<div className="mx-auto">
 								<h2 className="text-md mt-1 font-semibold text-neutral-900">Bicycles</h2>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li data-testid="ProductElement">
+					<div>
+						<ProductImageWrapper
+							src={
+								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Apparel-Alpinestars-Jacket_3bed6ff3.png"
+							}
+							alt={"test"}
+							width={512}
+							height={512}
+							sizes={"512px"}
+						/>
+						<div className="mt-2 flex justify-between">
+							<div className="mx-auto">
+								<h2 className="text-md mt-1 font-semibold text-neutral-900">Motorcycle Apparel</h2>
 							</div>
 						</div>
 					</div>
