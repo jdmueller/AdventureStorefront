@@ -1,9 +1,9 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { type ResolvingMetadata, type Metadata } from "next";
+import { LinkWithChannel } from "@/ui/atoms/LinkWithChannel";
 import { ProductListByCategoryDocument } from "@/gql/graphql";
 import { executeGraphQL } from "@/lib/graphql";
-/* import { ProductList } from "@/ui/components/ProductList"; */
+import { ProductList } from "@/ui/components/ProductList";
 import { ProductImageWrapper } from "@/ui/atoms/ProductImageWrapper";
 
 export const generateMetadata = async (
@@ -31,9 +31,7 @@ export default async function Page({ params }: { params: { slug: string; channel
 		notFound();
 	}
 
-	const { name } = category;
-
-	console.log(params.slug);
+	const { name, products } = category;
 
 	if (params.slug === "adventure-motorcycles") {
 		return (
@@ -45,13 +43,13 @@ export default async function Page({ params }: { params: { slug: string; channel
 					className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-4"
 				>
 					<li data-testid="ProductElement">
-						<Link href={"https://pysolution.com/"}>
+						<LinkWithChannel href={"/categories/bmw-r-1250-gs"}>
 							<div>
 								<ProductImageWrapper
 									src={
 										"https://adventureparts.s3.amazonaws.com/category-backgrounds/Subcategory-BMW-R-1250-GS_763667dd.png"
 									}
-									alt={"test"}
+									alt={"BMW R 1250 GS"}
 									width={512}
 									height={512}
 									sizes={"512px"}
@@ -62,26 +60,28 @@ export default async function Page({ params }: { params: { slug: string; channel
 									</div>
 								</div>
 							</div>
-						</Link>
+						</LinkWithChannel>
 					</li>
 
 					<li data-testid="ProductElement">
-						<div>
-							<ProductImageWrapper
-								src={
-									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Adventure-Motorcycles_ef8b144d.png"
-								}
-								alt={"test"}
-								width={512}
-								height={512}
-								sizes={"512px"}
-							/>
-							<div className="mt-2 flex justify-between">
-								<div className="mx-auto">
-									<h2 className="text-md mt-1 font-semibold text-neutral-900">KTM 250/390 Adventure</h2>
+						<LinkWithChannel href={"/categories/ktm-390-adventure"}>
+							<div>
+								<ProductImageWrapper
+									src={
+										"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Adventure-Motorcycles_ef8b144d.png"
+									}
+									alt={"test"}
+									width={512}
+									height={512}
+									sizes={"512px"}
+								/>
+								<div className="mt-2 flex justify-between">
+									<div className="mx-auto">
+										<h2 className="text-md mt-1 font-semibold text-neutral-900">KTM 250/390 Adventure</h2>
+									</div>
 								</div>
 							</div>
-						</div>
+						</LinkWithChannel>
 					</li>
 
 					<li data-testid="ProductElement">
@@ -198,13 +198,79 @@ export default async function Page({ params }: { params: { slug: string; channel
 						</div>
 					</li>
 				</ul>
-				{/* <h1 className="pb-8 pt-12 text-xl font-semibold">{name}</h1>
-				<ProductList products={products.edges.map((e) => e.node)} /> */}
 			</div>
 		);
 	}
 
-	if (params.slug === "motocross-motorcycles") {
+	if (params.slug === "street-motorcycles") {
+		return (
+			<div className="mx-auto max-w-7xl p-8 pb-16">
+				<h1 className="text-xl font-semibold">{name}</h1>
+				<ul
+					role="list"
+					data-testid="ProductList"
+					className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-4"
+				>
+					<li data-testid="ProductElement">
+						<LinkWithChannel href={"/categories/harley-davidson-sportster"}>
+							<div>
+								<ProductImageWrapper
+									src={
+										"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Harley-Davidson-Sportster-S_2f5feb69.webp"
+									}
+									alt={"Harley Davidson Sportster"}
+									width={512}
+									height={512}
+									sizes={"512px"}
+								/>
+								<div className="mt-2 flex justify-between">
+									<div className="mx-auto">
+										<h2 className="text-md mt-1 font-semibold text-neutral-900">Harley Davidson Sportster</h2>
+									</div>
+								</div>
+							</div>
+						</LinkWithChannel>
+					</li>
+				</ul>
+			</div>
+		);
+	}
+
+	if (params.slug === "sport-motorcycles") {
+		return (
+			<div className="mx-auto max-w-7xl p-8 pb-16">
+				<h1 className="text-xl font-semibold">{name}</h1>
+				<ul
+					role="list"
+					data-testid="ProductList"
+					className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-4"
+				>
+					<li data-testid="ProductElement">
+						<LinkWithChannel href={"/categories/ktm-rc390"}>
+							<div>
+								<ProductImageWrapper
+									src={
+										"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Street-KTM-RC-390_238ab132.png"
+									}
+									alt={"KTM RC390"}
+									width={512}
+									height={512}
+									sizes={"512px"}
+								/>
+								<div className="mt-2 flex justify-between">
+									<div className="mx-auto">
+										<h2 className="text-md mt-1 font-semibold text-neutral-900">KTM RC390</h2>
+									</div>
+								</div>
+							</div>
+						</LinkWithChannel>
+					</li>
+				</ul>
+			</div>
+		);
+	}
+
+	if (params.slug === "off-road-motorcycles") {
 		return (
 			<div className="mx-auto max-w-7xl p-8 pb-16">
 				<h1 className="text-xl font-semibold">{name}</h1>
@@ -365,8 +431,6 @@ export default async function Page({ params }: { params: { slug: string; channel
 						</div>
 					</li>
 				</ul>
-				{/* <h1 className="pb-8 pt-12 text-xl font-semibold">{name}</h1>
-				<ProductList products={products.edges.map((e) => e.node)} /> */}
 			</div>
 		);
 	}
@@ -532,9 +596,90 @@ export default async function Page({ params }: { params: { slug: string; channel
 						</div>
 					</li>
 				</ul>
-				{/* <h1 className="pb-8 pt-12 text-xl font-semibold">{name}</h1>
-				<ProductList products={products.edges.map((e) => e.node)} /> */}
 			</div>
 		);
 	}
+
+	if (params.slug === "electric-vehicles") {
+		return (
+			<div className="mx-auto max-w-7xl p-8 pb-16">
+				<h1 className="text-xl font-semibold">{name}</h1>
+				<ul
+					role="list"
+					data-testid="ProductList"
+					className="grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-4"
+				>
+					<li data-testid="ProductElement">
+						<LinkWithChannel href={"/categories/kaabo-wolf-king-gt"}>
+							<div>
+								<ProductImageWrapper
+									src={
+										"https://adventureparts.s3.amazonaws.com/category-backgrounds/Subcategory-Wolf-King-GT-Scooter.jpg_ecf84103.webp"
+									}
+									alt={"Kaabo Wolf King GT"}
+									width={512}
+									height={512}
+									sizes={"512px"}
+								/>
+								<div className="mt-2 flex justify-between">
+									<div className="mx-auto">
+										<h2 className="text-md mt-1 font-semibold text-neutral-900">Kaabo Wolf King GT</h2>
+									</div>
+								</div>
+							</div>
+						</LinkWithChannel>
+					</li>
+
+					<li data-testid="ProductElement">
+						<LinkWithChannel href={"/categories/surron-storm-bee"}>
+							<div>
+								<ProductImageWrapper
+									src={
+										"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Surron-SuperBee.jpg_41d95537.webp"
+									}
+									alt={"Surron Storm Bee"}
+									width={512}
+									height={512}
+									sizes={"512px"}
+								/>
+								<div className="mt-2 flex justify-between">
+									<div className="mx-auto">
+										<h2 className="text-md mt-1 font-semibold text-neutral-900">Surron Storm Bee</h2>
+									</div>
+								</div>
+							</div>
+						</LinkWithChannel>
+					</li>
+
+					<li data-testid="ProductElement">
+						<LinkWithChannel href={"/categories/surron-light-bee"}>
+							<div>
+								<ProductImageWrapper
+									src={
+										"https://adventureparts.s3.amazonaws.com/category-backgrounds/Subcategory-Surron-Light-Bee-X_c16a5d6a.webp"
+									}
+									alt={"Surron Storm Bee"}
+									width={512}
+									height={512}
+									sizes={"512px"}
+								/>
+								<div className="mt-2 flex justify-between">
+									<div className="mx-auto">
+										<h2 className="text-md mt-1 font-semibold text-neutral-900">Surron Light Bee</h2>
+									</div>
+								</div>
+							</div>
+						</LinkWithChannel>
+					</li>
+				</ul>
+			</div>
+		);
+	}
+
+	return (
+		<div className="mx-auto max-w-7xl p-8 pb-16">
+			<h1 className="pb-8 text-xl font-semibold">{name}</h1>
+			<ProductList products={products.edges.map((e) => e.node)} />
+		</div>
+	);
 }

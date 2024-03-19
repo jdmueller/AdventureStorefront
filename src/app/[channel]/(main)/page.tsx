@@ -3,6 +3,7 @@ import { ProductListByCollectionDocument } from "@/gql/graphql";
 import { executeGraphQL } from "@/lib/graphql";
 import { ProductList } from "@/ui/components/ProductList";
 import { ProductImageWrapper } from "@/ui/atoms/ProductImageWrapper";
+import { LogoImageWrapper } from "@/ui/atoms/LogoImageWrapper";
 
 export const metadata = {
 	title: "Adventure Parts | Performance Parts For Motorcycles And E-Bikes",
@@ -53,136 +54,150 @@ export default async function Page({ params }: { params: { channel: string } }) 
 				</li>
 
 				<li data-testid="ProductElement">
-					<div>
-						<ProductImageWrapper
-							src={
-								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Harley-Davidson-Sportster-S_923b6c29.webp"
-							}
-							alt={"test"}
-							width={512}
-							height={512}
-							sizes={"512px"}
-						/>
-						<div className="mt-2 flex justify-between">
-							<div className="mx-auto">
-								<h2 className="text-md mt-1 font-semibold text-neutral-900">Street Motorcycles</h2>
+					<LinkWithChannel href={"/categories/street-motorcycles"}>
+						<div>
+							<ProductImageWrapper
+								src={
+									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Harley-Davidson-Sportster-S_923b6c29.webp"
+								}
+								alt={"test"}
+								width={512}
+								height={512}
+								sizes={"512px"}
+							/>
+							<div className="mt-2 flex justify-between">
+								<div className="mx-auto">
+									<h2 className="text-md mt-1 font-semibold text-neutral-900">Street Motorcycles</h2>
+								</div>
 							</div>
 						</div>
-					</div>
+					</LinkWithChannel>
 				</li>
 
 				<li data-testid="ProductElement">
-					<div>
-						<ProductImageWrapper
-							src={
-								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Street-KTM-RC-390_238ab132.png"
-							}
-							alt={"test"}
-							width={512}
-							height={512}
-							sizes={"512px"}
-						/>
-						<div className="mt-2 flex justify-between">
-							<div className="mx-auto">
-								<h2 className="text-md mt-1 font-semibold text-neutral-900">Sport Motorcycles</h2>
+					<LinkWithChannel href={"/categories/sport-motorcycles"}>
+						<div>
+							<ProductImageWrapper
+								src={
+									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Street-KTM-RC-390_238ab132.png"
+								}
+								alt={"test"}
+								width={512}
+								height={512}
+								sizes={"512px"}
+							/>
+							<div className="mt-2 flex justify-between">
+								<div className="mx-auto">
+									<h2 className="text-md mt-1 font-semibold text-neutral-900">Sport Motorcycles</h2>
+								</div>
 							</div>
 						</div>
-					</div>
+					</LinkWithChannel>
 				</li>
 
 				<li data-testid="ProductElement">
-					<div>
-						<ProductImageWrapper
-							src={
-								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Subcategory-Yamaha-YZ450F_e772a58d.webp"
-							}
-							alt={"test"}
-							width={512}
-							height={512}
-							sizes={"512px"}
-						/>
-						<div className="mt-2 flex justify-between text-center">
-							<div className="mx-auto">
-								<h2 className="text-md mt-1 font-semibold text-neutral-900">Motocross Motorcycles</h2>
+					<LinkWithChannel href={"/categories/off-road-motorcycles"}>
+						<div>
+							<ProductImageWrapper
+								src={
+									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Subcategory-Yamaha-YZ450F_e772a58d.webp"
+								}
+								alt={"test"}
+								width={512}
+								height={512}
+								sizes={"512px"}
+							/>
+							<div className="mt-2 flex justify-between text-center">
+								<div className="mx-auto">
+									<h2 className="text-md mt-1 font-semibold text-neutral-900">Off-Road Motorcycles</h2>
+								</div>
 							</div>
 						</div>
-					</div>
+					</LinkWithChannel>
 				</li>
 
 				<li data-testid="ProductElement">
-					<div>
-						<ProductImageWrapper
-							src={
-								"https://adventureparts.s3.amazonaws.com/category-backgrounds/orv-ssv-my24-maverickr-xrs-sas-1000t-carbon-black-0007a_c5916037.avif"
-							}
-							alt={"test"}
-							width={512}
-							height={512}
-							sizes={"512px"}
-						/>
-						<div className="mt-2 flex justify-between">
-							<div className="mx-auto">
-								<h2 className="text-md mt-1 font-semibold text-neutral-900">Side x Side UTVs</h2>
+					<LinkWithChannel href={"/categories/side-x-side-utvs"}>
+						<div>
+							<ProductImageWrapper
+								src={
+									"https://adventureparts.s3.amazonaws.com/category-backgrounds/orv-ssv-my24-maverickr-xrs-sas-1000t-carbon-black-0007a_c5916037.avif"
+								}
+								alt={"test"}
+								width={512}
+								height={512}
+								sizes={"512px"}
+							/>
+							<div className="mt-2 flex justify-between">
+								<div className="mx-auto">
+									<h2 className="text-md mt-1 font-semibold text-neutral-900">Side x Side UTVs</h2>
+								</div>
 							</div>
 						</div>
-					</div>
+					</LinkWithChannel>
 				</li>
 
 				<li data-testid="ProductElement">
-					<div>
-						<ProductImageWrapper
-							src={
-								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Surron-SuperBee.jpg_451c3537.webp"
-							}
-							alt={"test"}
-							width={512}
-							height={512}
-							sizes={"512px"}
-						/>
-						<div className="mt-2 flex justify-between">
-							<div className="mx-auto">
-								<h2 className="text-md mt-1 font-semibold text-neutral-900">Electric Vehicles</h2>
+					<LinkWithChannel href={"/categories/electric-vehicles"}>
+						<div>
+							<ProductImageWrapper
+								src={
+									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Surron-SuperBee.jpg_451c3537.webp"
+								}
+								alt={"test"}
+								width={512}
+								height={512}
+								sizes={"512px"}
+							/>
+							<div className="mt-2 flex justify-between">
+								<div className="mx-auto">
+									<h2 className="text-md mt-1 font-semibold text-neutral-900">Electric Vehicles</h2>
+								</div>
 							</div>
 						</div>
-					</div>
+					</LinkWithChannel>
 				</li>
 
 				<li data-testid="ProductElement">
-					<div>
-						<ProductImageWrapper
-							src={
-								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Bicycles-Specialized-S-Works-Epic_2d163ed6.webp"
-							}
-							alt={"test"}
-							width={512}
-							height={512}
-							sizes={"512px"}
-						/>
-						<div className="mt-2 flex justify-between">
-							<div className="mx-auto">
-								<h2 className="text-md mt-1 font-semibold text-neutral-900">Bicycles</h2>
+					<LinkWithChannel href={"/categories/bicycles"}>
+						<div>
+							<ProductImageWrapper
+								src={
+									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Bicycles-Specialized-S-Works-Epic_2d163ed6.webp"
+								}
+								alt={"test"}
+								width={512}
+								height={512}
+								sizes={"512px"}
+							/>
+							<div className="mt-2 flex justify-between">
+								<div className="mx-auto">
+									<h2 className="text-md mt-1 font-semibold text-neutral-900">Bicycles</h2>
+								</div>
 							</div>
 						</div>
-					</div>
+					</LinkWithChannel>
 				</li>
 
 				<li data-testid="ProductElement">
-					<div>
-						<ProductImageWrapper
-							src={
-								"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Apparel-Alpinestars-Jacket_3bed6ff3.png"
-							}
-							alt={"test"}
-							width={512}
-							height={512}
-							sizes={"512px"}
-						/>
-						<div className="mt-2 flex justify-between">
-							<div className="mx-auto">
-								<h2 className="text-md mt-1 font-semibold text-neutral-900">Motorcycle Apparel</h2>
+					<LinkWithChannel href={"/categories/motorcycle-apparel"}>
+						<div>
+							<ProductImageWrapper
+								src={
+									"https://adventureparts.s3.amazonaws.com/category-backgrounds/Category-Apparel-Alpinestars-Jacket_3bed6ff3.png"
+								}
+								alt={"test"}
+								width={512}
+								height={512}
+								sizes={"512px"}
+							/>
+							<div className="mt-2 flex justify-between">
+								<div className="mx-auto">
+									<h2 className="text-md mt-1 font-semibold text-neutral-900">Motorcycle Apparel</h2>
+								</div>
 							</div>
 						</div>
-					</div>
+					</LinkWithChannel>
 				</li>
 			</ul>
 
@@ -190,22 +205,22 @@ export default async function Page({ params }: { params: { channel: string } }) 
 			<ul
 				role="list"
 				data-testid="ProductList"
-				className="grid grid-cols-1 gap-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+				className="mt-5 grid grid-cols-1 gap-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
 			>
 				<li data-testid="ProductElement">
-					<div>
-						<ProductImageWrapper
+					<div className="pt-3">
+						<LogoImageWrapper
 							src={"/Logo-Vortex-Racing.png"}
 							alt={"Vortex Racing Logo"}
-							width={250}
-							height={250}
+							width={256}
+							height={256}
 							sizes={"256px"}
 						/>
 					</div>
 				</li>
 				<li data-testid="ProductElement">
-					<div>
-						<ProductImageWrapper
+					<div className="pt-1">
+						<LogoImageWrapper
 							src={"/Logo-Galfer-USA.png"}
 							alt={"Galfer Racing USA Logo"}
 							width={256}
@@ -215,41 +230,41 @@ export default async function Page({ params }: { params: { channel: string } }) 
 					</div>
 				</li>
 				<li data-testid="ProductElement">
-					<div>
-						<ProductImageWrapper
+					<div className="pt-4">
+						<LogoImageWrapper
 							src={"/Logo-Puig-Hi-Tech-Parts.png"}
 							alt={"Puig Hi Tech Parts Logo"}
-							width={250}
-							height={250}
+							width={256}
+							height={256}
 							sizes={"256px"}
 						/>
 					</div>
 				</li>
 				<li data-testid="ProductElement">
 					<div>
-						<ProductImageWrapper
+						<LogoImageWrapper
 							src={"/Logo-DNA-Filters.png"}
 							alt={"DNA High Flow Air Filters Logo"}
-							width={250}
-							height={250}
+							width={256}
+							height={256}
 							sizes={"256px"}
 						/>
 					</div>
 				</li>
 				<li data-testid="ProductElement">
-					<div>
-						<ProductImageWrapper
+					<div className="pt-3">
+						<LogoImageWrapper
 							src={"/Logo-Hotbodies-Racing.png"}
 							alt={"Hotbodies Racing Logo"}
-							width={250}
-							height={250}
+							width={256}
+							height={256}
 							sizes={"256px"}
 						/>
 					</div>
 				</li>
 			</ul>
 
-			<h1 className="mt-10 text-xl font-bold">Featured Products</h1>
+			<h1 className="mt-8 text-xl font-bold">Featured Products</h1>
 			<ProductList products={products} />
 		</section>
 	);
