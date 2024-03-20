@@ -88,8 +88,8 @@ export async function Footer({ channel }: { channel: string }) {
 					</div>
 				)}
 
-				<div className="flex flex-col justify-between border-t border-orange-600 pb-4 pt-10 sm:flex-row">
-					<p className="text-sm text-neutral-800">
+				<div className="mt-10 flex flex-col justify-between border-t border-orange-600 pb-4 pt-10 sm:flex-row">
+					<p className="pt-3 text-sm text-neutral-800">
 						Copyright &copy; {currentYear} | Adventure Parts, LLC. All Rights Reserved.
 					</p>
 					<Image alt="Credit Card Logos" height={40} width={250} src={"/Credit-Card-Logos.png"} />
