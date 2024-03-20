@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import { LinkWithChannel } from "../atoms/LinkWithChannel";
 import { ChannelSelect } from "./ChannelSelect";
@@ -81,12 +80,6 @@ export async function Footer({ channel }: { channel: string }) {
 					})}
 				</div>
 
-				<div className="flex flex-col justify-between pb-10 pt-5 sm:flex-row">
-					<div className="ml-auto">
-						<Image alt="Credit Card Logos" height={40} width={250} src={"/Credit-Card-Logos.png"} />
-					</div>
-				</div>
-
 				{channels?.channels && (
 					<div className="mb-4 text-neutral-800">
 						<label>
@@ -99,19 +92,7 @@ export async function Footer({ channel }: { channel: string }) {
 					<p className="text-sm text-neutral-800">
 						Copyright &copy; {currentYear} | Adventure Parts, LLC. All Rights Reserved.
 					</p>
-					<p className="flex gap-1 text-sm text-neutral-800">
-						Powered by{" "}
-						<Link target={"_blank"} href={"https://pysolution.com/"}>
-							pySolution
-						</Link>
-						<Link
-							href={"https://pysolution.com"}
-							target={"_blank"}
-							className={"icon-spin-reverse opacity-70"}
-						>
-							<Image alt="pySolution Python Logo" height={20} width={20} src={"/python-brands.svg"} />
-						</Link>
-					</p>
+					<Image alt="Credit Card Logos" height={40} width={250} src={"/Credit-Card-Logos.png"} />
 				</div>
 
 				<div className="mx-auto flex flex-col justify-center pb-10 sm:flex-row">
