@@ -24,7 +24,7 @@ export async function Footer({ channel }: { channel: string }) {
 	return (
 		<footer className="border-orange-600 bg-orange-400">
 			<div className="mx-auto max-w-7xl px-4 lg:px-8">
-				<div className="grid grid-cols-3 gap-8 pt-16">
+				<div className="grid grid-cols-4 gap-8 pt-16">
 					{footerLinks.menu?.items?.map((item) => {
 						return (
 							<div key={item.id}>
@@ -81,9 +81,9 @@ export async function Footer({ channel }: { channel: string }) {
 					})}
 				</div>
 
-				<div className="flex flex-col justify-between pb-10 sm:flex-row">
+				<div className="flex flex-col justify-between pb-10 pt-5 sm:flex-row">
 					<div className="ml-auto">
-						<Image alt="pySolution Python Logo" height={40} width={250} src={"/Credit-Card-Logos.png"} />
+						<Image alt="Credit Card Logos" height={40} width={250} src={"/Credit-Card-Logos.png"} />
 					</div>
 				</div>
 
